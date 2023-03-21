@@ -10,7 +10,6 @@ FileSaver::FileSaver(QObject *parent)
 
 void FileSaver::save(QString filename, const QString data) const noexcept
 {
-    filename = "../"+filename;
     std::ofstream file(filename.toStdString(), std::ios_base::out);
     if(!file.is_open())
     {
